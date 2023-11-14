@@ -23,32 +23,32 @@
         </div>
         <div class="status balance">
             <div class="title">Balance</div>
-            <div class="price"  id="balance">R1700</div>
+            <div class="price" id="balance">R1700</div>
         </div>
     </div>
 
-    <select>
+    <select id="transactionType">
         <option value="income">Income</option>
         <option value="expense">Expense</option>
     </select>
 
-    <input type="text" placeholder="Details">
+    <input type="text" placeholder="Details" id="transactionDetail">
 
-    <input type="number" placeholder="Amount">
-    <button>ADD TRANSACTION</button>
+    <input type="number" placeholder="Amount" id="transactionAmount">
+    <button onclick="addTransaction()">ADD TRANSACTION</button>
 
 
-    <div class="transactions">
+    <div class="transactions" id="transactions">
         <div class="transaction expense-t">
             <div class="detail">Salary</div>
-            <div class="amount">R3000</div>
+            <div class="amount">R78900</div>
             <div class="delete">
                <button>X</button>
             </div>
         </div>
     </div>
 
- </div>
+ </div>   
 
 
     <script src="./app.js"></script>

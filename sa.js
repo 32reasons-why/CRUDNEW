@@ -23,7 +23,6 @@ function addTransaction() {
 
     if (transactionDetail.length < 3) {
         alert("Detail cannot be lesser than 3 letter")
-
         return;
     }
 
@@ -83,17 +82,17 @@ function display() {
             myClass = 'income-t'
         }
 
-        transactionsID.innerHTML += `
+        transactionsID.innerHTML += 
     
     <div class="transaction ${myClass}">
             <div class="detail">${state.transactions[i].detail}</div>
             <div class="amount">R${state.transactions[i].amount}</div>
             <div class="delete">
-               <button onclick="removeTransaction(${state.transactions[i].id})"> X </button>
+               <button onclick="removeTransaction(${state.transactions[i].id})">X</button>
             </div>
         </div>
     
-    `
+    
     }
 
 }
@@ -106,17 +105,16 @@ function render() {
 function removeTransaction(id) {
     state.transactions = state.transactions.filter(stuff => stuff.id !== id)
 
-    
+    /*
     let w = []
 
     for (let i = 0; i < state.transactions.length; i++) {
         if (state.transactions[i].id !== id) {
-           w.push(state.transactions[i])
-        }   
+            w.push(state.transactions[i])
+        }
     }
     state.transactions = w
-    
-
+    */
     saveToStorage()
     render()
 }
